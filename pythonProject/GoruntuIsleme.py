@@ -8,13 +8,13 @@ histogram = [0] * 256
 # Histogramı hesaplamak için boş bir liste oluşturdum
 
 
-# Görüntüyü dolaşarak histogramı hesaplayın
+# Görüntüyü dolaşarak histogramı hesaplamak için çift for döngüsü kullanıyorum
 for i in range(img.shape[0]):
     for j in range(img.shape[1]):
-        piksel_degeri = img[i, j, 0]  # Mavi kanalı kullanabilirsiniz, 0-255 arasında bir değer olacaktır
+        piksel_degeri = img[i, j, 0] 
         histogram[piksel_degeri] += 1
 
-# Histogramı görselleştirin
+#Histogramı grafiğe aktarıyoruz
 plt.bar(range(256), histogram,)
 plt.xlim([0, 255])
 plt.show()
